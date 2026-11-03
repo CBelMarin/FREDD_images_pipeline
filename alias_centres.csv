@@ -1,0 +1,7 @@
+# Center-label aliases: the same center sometimes appears under several labels
+# (center column of the data CSV, or folder name for images with no patient).
+# One line per label to replace (nom_source;nom_retenu). Case, accents, spaces and punctuation are ignored.
+# The retained name is used for images_traitees/<center>/, the reports and the eCRF reconciliation.
+# A numeric center code found in the data file can be converted the same way (one line per code, e.g. "2;CARGO-HUS").
+nom_source;nom_retenu
+HUS;CARGO-HUS

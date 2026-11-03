@@ -1,0 +1,33 @@
+# ─────────────────────────────────────────────────────────────────────────────
+# Dépendances d'exécution : pipeline FREDD + code de prétraitement raretia
+# Python >= 3.10 requis (pydicom 3.x).
+#
+# ⚠ Versions VALIDÉES le 14/10/2026 avec la suite de tests (faux raretia).
+#   Pour reproduire un environnement identique, utiliser requirements-lock.txt
+#   (environnement complet figé, dépendances transitives incluses).
+#
+# Installation hors-ligne (environnement sécurisé sans accès Internet) : voir README.md, §4.
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Lecture / écriture DICOM (pipeline : contrôle de pseudonymisation ; raretia : lecture + écriture)
+pydicom==3.0.2
+
+# Décodeurs des DICOM compressés (JPEG baseline/lossless, JPEG-LS, JPEG 2000, RLE).
+# Sans eux, pydicom ne peut pas lire les pixels de nombreux DICOM d'imagerie
+# ophtalmique et raretia rejette ces images (« décodage des pixels échoue »).
+pylibjpeg==2.1.0
+pylibjpeg-libjpeg==2.4.0
+pylibjpeg-openjpeg==2.6.0
+pylibjpeg-rle==2.2.0
+
+# Traitement d'image (raretia)
+numpy==2.5.4
+# NB : oct-converter impose lui-même `opencv-python` (version avec interface
+# graphique). On s'aligne dessus plutôt que d'ajouter opencv-python-headless,
+# les deux paquets fournissant le même module cv2 (conflit). Sous Linux sans
+# environnement graphique, opencv-python peut exiger la bibliothèque système
+# libGL (paquet libgl1) : à vérifier avec l'administrateur de l'environnement.
+opencv-python==5.0.0.93
+
+# Lecture des fichiers Heidelberg .e2e (raretia, optionnel mais nécessaire pour FREDD)
+oct-converter==0.7.0

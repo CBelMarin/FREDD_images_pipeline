@@ -1,0 +1,63 @@
+# ── Données de santé et sorties : ne JAMAIS versionner ─────────────────────────
+# Images médicales, exports de données, rapports (leurs chemins sources peuvent être identifiants)
+*.dcm
+*.DCM
+*.e2e
+*.E2E
+*.sdb
+*.fda
+*.img
+*.vol
+*.xlsx
+*.xls
+*.zip
+*.7z
+*.tar
+*.tar.gz
+*.png
+*.jpg
+*.jpeg
+*.tif
+*.tiff
+*.bmp
+*.mp4
+# Les CSV de données : seuls ceux listés ci-dessous (non patients) sont suivis
+*.csv
+!alias_centres.csv
+# Dossiers de sortie du pipeline
+images_traitees/
+sans_patient/
+non_traitees_format/
+echecs_traitement/
+quarantaine_pseudonymisation/
+rapports/
+echantillon/
+01_inventaire/
+_travail/
+*_simulation/
+export_transfert/
+
+# ── Configuration locale (chemins propres à chaque machine) ────────────────────
+config_fredd.ini
+
+# ── Environnements et dépendances binaires (à reconstruire, pas à versionner) ──
+python/
+venv/
+.venv/
+wheels/
+wheelhouse/
+python-*-embed-*/
+
+# ── Fichiers générés ───────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+.idea/
+.vscode/
+Thumbs.db
+.DS_Store
+
+# Exceptions : jeux de tests synthétiques éventuels
+!tests/**/*.csv

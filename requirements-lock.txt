@@ -1,0 +1,26 @@
+# Environnement COMPLET validé le 14/10/2026 (dépendances transitives incluses).
+# Généré par : pip install -r requirements.txt && pip freeze
+# À utiliser pour l'installation hors-ligne reproductible (README §4).
+construct==2.10.70
+contourpy==1.4.0
+cycler==0.12.1
+fonttools==4.67.0
+h5py==3.16.0
+ImageIO==2.38.1
+imageio-ffmpeg==0.6.0
+kiwisolver==1.5.1
+matplotlib==3.11.2
+natsort==8.4.0
+numpy==2.5.4
+oct_converter==0.7.0
+opencv-python==5.0.0.93
+packaging==26.3
+pillow==12.3.0
+pydicom==3.0.2
+pylibjpeg==2.1.0
+pylibjpeg-libjpeg==2.4.0
+pylibjpeg-openjpeg==2.6.0
+pylibjpeg-rle==2.2.0
+pyparsing==3.3.3
+python-dateutil==2.9.0.post0
+six==1.17.0
